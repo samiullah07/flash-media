@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: "Font_FB", Sans-serif;
+    direction: rtl;
+}
+.opicty{
+    opacity: 0;
+}
+.text-xl{
+    font-size: 26px;
+}
+.container{
+    max-width: 1200px;
+}
+
+
+
+
+
+.bg-video-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -4;
+    transition: all 0.5s ease;
+}
+.bg-video-main iframe {
+    width: 100%;
+    height: 135%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner-area-main::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: radial-gradient(at top center, rgb(80, 143, 137, 0.4) 10%, #508F89 85%);
+    z-index: -1;
+}
+.banner-area-main a{
+    padding: 13px 30px;
+}
+
+
+.company-logo-box{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.swiper-button-prev, .swiper-button-next{
+    color: #508F89 !important;
+}
+.profile-images{
+    max-width: 900px;
+    width: 100%;
+    margin: 50px auto 0;
+}
+.profile-images img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+
+.how-work-box{
+    text-align: center;
+}
+.how-work-icon{
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    background-color: #174844;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #fff;
+}
+.how-work-content h3{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 15px 0 10px;
+    color: #fff;
+}
+.how-work-content p{
+    font-size: 16px;
+    color: #c8c8c8;
+}
+
+
+
+.how-its-work-section {
+    background: #265C57;
+    padding: 50px 0;
+}
+.portfolio-slider-main .swiper-slide button{
+    opacity: 0.3;
+}
+.portfolio-slider-main .swiper-slide button[data-headlessui-state="selected"]{
+    opacity: 1;
+}
+.portfolio-slider-main .swiper-slide button:focus-visible{
+    outline: none;
+}
+.portfolio-content-main {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid 1px rgb(11, 72, 67);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.portfolio-content-main h3{
+    font-size: 28px;
+    font-weight: 700;
+    color: #28CCBD;
+}
+.portfolio-content-main p{
+    font-size: 16px;
+    color: #c8c8c8;
+    margin-top: 12px;
+}
