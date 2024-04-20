@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: "Font_FB", Sans-serif;
     direction: rtl;
+    overflow-x: hidden;
 }
 .opicty{
     opacity: 0;
@@ -13,11 +17,29 @@ body{
 }
 .container{
     max-width: 1200px;
+    padding: 0 15px;
 }
 
 
-
-
+header{
+    padding: 9px 10px;
+    text-align: center;
+    background-color: #265C57;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+header.scrolled{
+    opacity: 1;
+    visibility: visible;
+}
+.logo{
+    width: 250px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 auto;
+}
 
 .bg-video-main {
     position: absolute;
@@ -31,7 +53,7 @@ body{
 }
 .bg-video-main iframe {
     width: 100%;
-    height: 135%;
+    height: 170%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,6 +82,19 @@ body{
 }
 .swiper-button-prev, .swiper-button-next{
     color: #508F89 !important;
+    background-color: #fff !important;
+    padding: 15px;
+    width: 35px !important;
+    height: 35px !important;
+    box-shadow: 0 0 7px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    background-color: #508F89 !important;
+    color: #fff !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+    font-size: 20px !important;
 }
 .profile-images{
     max-width: 900px;
@@ -76,6 +111,7 @@ body{
 
 .how-work-box{
     text-align: center;
+    margin-bottom: 20px;
 }
 .how-work-icon{
     text-align: center;
@@ -131,4 +167,26 @@ body{
     font-size: 16px;
     color: #c8c8c8;
     margin-top: 12px;
+}
+.contact-form-main-araea {
+    max-width: 400px;
+}
+
+
+
+footer{
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #265C57;
+    color: #fff;
+}
+
+
+
+
+
+@media (max-width: 767px){
+    .bg-video-main{
+        display: none;
+    }
 }

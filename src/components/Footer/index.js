@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -9,7 +10,9 @@ import React from 'react';
 
 function Footer() {
     return(<>
-        <footer></footer>
+        <footer>
+            <Link to="/">תקנון האתר</Link>
+        </footer>
     </>)
 }
 
