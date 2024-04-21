@@ -13,6 +13,7 @@ import * as yup from 'yup';
 import Swal from 'sweetalert2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import axios from 'axios';
 
 
 
@@ -58,13 +59,24 @@ function Home() {
             comments: '',
         },
         validationSchema: validationSchema,
-        onSubmit: (values) => {
-            Swal.fire({
-                icon: "success",
-                title: "Your Message Submit Successfully",
-                showConfirmButton: true,
-                // timer: 1500
-            });
+        onSubmit: (values, { resetForm }) => {
+            console.log(values);
+            axios.post('your_api_link',  values).then(response => {
+                if (response.success === true) {
+                    resetForm();
+                    Swal.fire({
+                        icon: "success",
+                        title: "Your Message Submit Successfully",
+                        showConfirmButton: true,
+                        // timer: 1500
+                    });
+                } else {
+                  console.error('Failed to send email.');
+                }
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
         }
     });
     return(<>
@@ -250,9 +262,10 @@ function Home() {
                 <Tab.List>
                     <div className='portfolio-slider-main'>
                         <Swiper
-                            modules={[Navigation]}
+                            modules={[Navigation, Pagination]}
                             spaceBetween={50}
                             slidesPerView={4}
+                            pagination={{ clickable: true }}
                             breakpoints={{
                                 0: {
                                     slidesPerView: 2,
