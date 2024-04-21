@@ -80,9 +80,15 @@ header.scrolled{
     max-width: 300px;
     margin: 0 auto;
 }
+.swiper{
+    padding: 0 40px 40px !important;
+}
+.swiper-pagination-bullet-active {
+    background: #28ccbd !important;
+}
 .swiper-button-prev, .swiper-button-next{
-    color: #508F89 !important;
-    background-color: #fff !important;
+    color: #fff !important;
+    background-color: #28ccbd !important;
     padding: 15px;
     width: 35px !important;
     height: 35px !important;
@@ -95,6 +101,14 @@ header.scrolled{
 }
 .swiper-button-next::after, .swiper-button-prev::after{
     font-size: 20px !important;
+}
+.swiper .swiper-button-prev {
+    right: 0 !important;
+    left: auto;
+}
+.swiper .swiper-button-next {
+    left: 0 !important;
+    right: auto;
 }
 .profile-images{
     max-width: 900px;
@@ -156,7 +170,7 @@ header.scrolled{
     background-color: rgba(0, 0, 0, 0.1);
     border: solid 1px rgb(11, 72, 67);
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .portfolio-content-main h3{
     font-size: 28px;
@@ -170,6 +184,16 @@ header.scrolled{
 }
 .contact-form-main-araea {
     max-width: 400px;
+}
+.contact-section{
+    background-image: url('./../public/images/contact-bg.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.contact-main-area{
+    padding: 50px;
+    background-color: #f0f0f0;
 }
 
 
@@ -188,5 +212,8 @@ footer{
 @media (max-width: 767px){
     .bg-video-main{
         display: none;
+    }
+    .contact-section{
+        background-size: cover;
     }
 }
